@@ -20,6 +20,7 @@ export function useMultiStepForm(steps: ReactElement[]) {
   return {
     currentIndex,
     step: steps[currentIndex],
+    steps,
     next,
     back,
   };

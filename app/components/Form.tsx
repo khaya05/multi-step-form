@@ -1,8 +1,10 @@
 'use client'
 
+import FormSteps from "./form-steps/FormSteps"
+
 function Form() {
   return (
-    <div>Form</div>
+    <FormSteps />
   )
 }
 

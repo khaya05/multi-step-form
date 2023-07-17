@@ -18,7 +18,7 @@ const PersonalInfo = () => {
   ];
 
   return (
-    <>
+    <div>
       <h2>Personal info</h2>
       <p>Please provide you name, email address, and phone number.</p>
 
@@ -32,7 +32,7 @@ const PersonalInfo = () => {
           );
         })}
       </form>
-    </>
+    </div>
   );
 };
 
