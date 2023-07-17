@@ -5,22 +5,31 @@ export function useMultiStepForm(steps: ReactElement[]) {
 
   function next() {
     setCurrentIndex((i) => {
-      if (i >= steps.length - 1) return i;
+      if (i >= steps.length - 1) {
+        console.log('next clicked');
+        return i;
+      }
       return i + 1;
     });
+
+    console.log(currentIndex);
   }
 
   function back() {
     setCurrentIndex((i) => {
-      if (i <= 0) return i;
+      console.log('back clicked');
+      if (i <= 0) {
+        return i;
+      }
       return i - 1;
     });
+    console.log(currentIndex);
   }
 
   return {
     currentIndex,
-    step: steps[currentIndex],
     steps,
+    step: steps[currentIndex],
     next,
     back,
   };

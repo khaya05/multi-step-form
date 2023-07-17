@@ -7,8 +7,8 @@ export default function Home() {
         md:flex
         md:justify-center
         md:items-center
-        h-full
-      ">
+        h-full"
+    >
       <Form />
     </main>
   );

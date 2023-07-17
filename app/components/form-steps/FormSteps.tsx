@@ -2,7 +2,7 @@ import useCustomHook from '@/hooks/useCustomHook';
 import Button from '../Button';
 
 export default function FormSteps() {
-  const { steps, currentIndex, step } = useCustomHook();
+  const { step, steps, currentIndex } = useCustomHook();
 
   return (
     <div>
