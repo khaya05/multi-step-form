@@ -4,7 +4,19 @@ import FormSteps from "./form-steps/FormSteps"
 
 function Form() {
   return (
-    <FormSteps />
+    <div 
+      className="
+        bg-white
+        rounded-xl
+        h-full
+        md:p-10
+        md:h-fit
+        md:shadow-xl
+      "
+    >
+
+      <FormSteps />
+    </div>
   )
 }
 

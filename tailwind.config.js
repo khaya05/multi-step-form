@@ -5,20 +5,21 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  // theme: {
-  //   extend: {
-  //     backgroundImage: {
-  //       'desktop-img': 'url(/images/bg-sidebar-desktop.svg)',
-  //       'mobile-img': 'url(/images/bg-sidebar-mobile.svg)',
-  //     },
+  theme: {
+    extend: {
+      backgroundImage: {
+        'desktop-img': `url('/images/bg-sidebar-desktop.svg')`,
+        'mobile-img': `url('/images/bg-sidebar-mobile.svg')`,
+      },
 
-  //     colors: {
-  //       'light-blue': '#EFF5FF',
-  //       'border-color': '#D6D9E6',
-  //       denim: '#022959',
-  //       grey: '#9699AA',
-  //     },
-  //   },
-  // },
+      colors: {
+        'light-blue': '#EFF5FF',
+        'border-color': '#D6D9E6',
+        denim: '#022959',
+        gray: '#9699AA',
+        purple: '#483EFF',
+      },
+    },
+  },
   plugins: [],
 };

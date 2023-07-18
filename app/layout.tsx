@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Ubuntu } from 'next/font/google';
 
-const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '700'] });
+const ubuntu = Ubuntu({ subsets: ['cyrillic'], weight: ['400','500', '700'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
