@@ -6,7 +6,7 @@ const Button = () => {
   const { next, back} = useCustomHook()
   
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center w-full boarder">
       <button onClick={back}>Go Back</button>
       <button onClick={next}>Next Step</button>
     </div>

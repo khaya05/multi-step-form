@@ -13,7 +13,7 @@ export default function FormSteps() {
         mx-auto
         md:flex
         md:justify-center
-        md:items-start
+        md:items-center
         md:static
         md:w-full
         md:h-fit
@@ -30,7 +30,7 @@ export default function FormSteps() {
           md:w-[274px]
         "
       ></div>
-      <div>
+      <div className='h-full flex flex-col justify-between items-center'>
         <div
           className="
           relative
@@ -46,10 +46,10 @@ export default function FormSteps() {
           md:top-0
           md:left-0
           md:shadow-none
-          md:w-fit
-          md:px-4
-          md:py-4
-          max-w-[940px]
+          md:px-0
+          md:py-0
+          md:mr-[5.25rem]
+          md:w-[450px]
         "
         >
           {step}

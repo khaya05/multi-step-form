@@ -18,6 +18,7 @@ module.exports = {
         denim: '#022959',
         gray: '#9699AA',
         purple: '#483EFF',
+        'very-light-gray': '#F8F9FF',
       },
     },
   },

@@ -14,6 +14,6 @@ main {
   }
 
   .description{
-    @apply text-gray text-[1rem] leading-[156.25%]
+    @apply text-gray text-[1rem] leading-[156.25%] mb-[1.38rem] md:mb-[2.19rem]
   }
 }

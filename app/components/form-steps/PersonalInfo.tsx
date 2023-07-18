@@ -18,9 +18,9 @@ const PersonalInfo = () => {
   ];
 
   return (
-    <div className='border'>
+    <div>
       <h2 className='title'>Personal info</h2>
-      <p className='description mb-[2.19rem]'>Please provide you name, email address, and phone number.</p>
+      <p className='description'>Please provide you name, email address, and phone number.</p>
 
       <form>
         {inputs.map(({ label, type, placeholder }) => {
