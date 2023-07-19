@@ -9,7 +9,7 @@ function Form() {
         bg-white
         rounded-xl
         h-full
-        md:p-10
+        md:p-4
         md:h-fit
         md:shadow-xl
       "
