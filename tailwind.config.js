@@ -18,7 +18,11 @@ module.exports = {
         denim: '#022959',
         gray: '#9699AA',
         purple: '#483EFF',
+        'purple-hover': '#928CFF',
+        'denim-hover': '#164A8A',
         'very-light-gray': '#F8F9FF',
+        'sky-blue': '#BEE2FD',
+        'light-blue-text': '#ABBCFF'
       },
     },
   },

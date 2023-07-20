@@ -1,6 +1,7 @@
 import useCustomHook from '@/hooks/useCustomHook';
 import Button from '../Button';
 import { useSelector } from 'react-redux';
+import StepsIndicator from './StepsIndicator';
 
 export default function FormSteps() {
   const steps = useSelector((state: any) => state.steps.steps)
@@ -23,7 +24,7 @@ export default function FormSteps() {
         md:static
         md:w-full
         md:gap-[6.25rem]
-        md:shadow-0
+        md:shadow-none
         "
     >
       <div
@@ -31,11 +32,16 @@ export default function FormSteps() {
           h-[10.5rem]
           bg-mobile-img 
           bg-no-repeat
+          pt-[2.13rem]
           md:bg-desktop-img
           md:h-[568px]
           md:w-[274px]
+          md:px-8
+          md:py-10
         "
-      ></div>
+      >
+        <StepsIndicator />
+      </div>
       <div
         className="
           flex 

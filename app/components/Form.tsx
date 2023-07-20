@@ -1,10 +1,10 @@
-'use client'
+'use client';
 
-import FormSteps from "./form-steps/FormSteps"
+import FormSteps from './form-steps/FormSteps';
 
 function Form() {
   return (
-    <div 
+    <div
       className="
         bg-white
         rounded-xl
@@ -14,10 +14,9 @@ function Form() {
         shadow-xl
       "
     >
-
       <FormSteps />
     </div>
-  )
+  );
 }
 
-export default Form
+export default Form;

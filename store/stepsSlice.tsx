@@ -26,6 +26,7 @@ export const stepsSlice = createSlice({
   initialState,
   reducers: {
     next: (state) => {
+      console.log('next >>')
       if (state.currentIndex >= state.steps.length - 1) {
         return state;
       }
