@@ -1,8 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Ubuntu } from 'next/font/google';
+import { ReduxProvider } from '@/store/provider';
 
-const ubuntu = Ubuntu({ subsets: ['cyrillic'], weight: ['400','500', '700'] });
+const ubuntu = Ubuntu({ subsets: ['cyrillic'], weight: ['400', '500', '700'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ubuntu.className}>{children}</body>
+      <body className={ubuntu.className}>
+        <ReduxProvider>{children}</ReduxProvider>
+      </body>
     </html>
   );
 }

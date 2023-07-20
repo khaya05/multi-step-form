@@ -11,7 +11,7 @@ function Form() {
         h-full
         md:p-4
         md:h-fit
-        md:shadow-xl
+        shadow-xl
       "
     >
 

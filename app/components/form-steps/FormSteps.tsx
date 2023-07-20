@@ -1,12 +1,17 @@
 import useCustomHook from '@/hooks/useCustomHook';
 import Button from '../Button';
+import { useSelector } from 'react-redux';
 
 export default function FormSteps() {
-  const { step, steps, currentIndex } = useCustomHook();
+  const steps = useSelector((state: any) => state.steps.steps)
+  const currentIndex = useSelector((state: any) => state.steps.currentIndex)
+  const step = steps[currentIndex]
+
 
   return (
     <div
       className="
+        shadow-xl
         relative
         w-[375px]
         custom-height-2
@@ -18,6 +23,7 @@ export default function FormSteps() {
         md:static
         md:w-full
         md:gap-[6.25rem]
+        md:shadow-0
         "
     >
       <div
@@ -76,7 +82,7 @@ export default function FormSteps() {
             {step}
           </div>
         </div>
-        <div className="w-full my-4 bg-white">
+        <div className="w-full mt-4 bg-white h-[4.5rem] px-4 grid place-items-center md:mb-4 md:px-0">
           <Button />
         </div>
       </div>
