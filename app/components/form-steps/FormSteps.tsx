@@ -1,16 +1,23 @@
 import useCustomHook from '@/hooks/useCustomHook';
 import Button from '../Button';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import StepsIndicator from './StepsIndicator';
+import { next } from '@/store/stepsSlice';
 
 export default function FormSteps() {
+  const dispatch = useDispatch()
   const steps = useSelector((state: any) => state.steps.steps)
   const currentIndex = useSelector((state: any) => state.steps.currentIndex)
   const step = steps[currentIndex]
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    dispatch(next())
+  }
 
   return (
-    <div
+    <form
+      onSubmit={(e) => handleSubmit(e)}
       className="
         shadow-xl
         relative
@@ -92,6 +99,6 @@ export default function FormSteps() {
           <Button />
         </div>
       </div>
-    </div>
+    </form>
   );
 }

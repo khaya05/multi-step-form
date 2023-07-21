@@ -11,7 +11,7 @@ interface StepsState {
 }
 
 const initialState: StepsState = {
-  currentIndex: 0,
+  currentIndex: 1,
   steps: [
     <PersonalInfo key={0} />,
     <Plan key={1} />,

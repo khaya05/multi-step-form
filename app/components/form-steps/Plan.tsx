@@ -18,15 +18,15 @@ const Plan = () => {
   return (
     <>
       <h2 className="title">Select your plan</h2>
-      <p className="description">
+      <legend className="description">
         You have the option of monthly or yearly billing.
-      </p>
+      </legend>
       <div className="">
-        <div className="mb-6 flex flex-col gap-3 justify-between md:flex-row">
+        <fieldset className="mb-6 flex flex-col gap-3 justify-between md:flex-row">
           {plans.map((plan) => (
             <PlanComponent {...plan} key={plan.name} />
           ))}
-        </div>
+        </fieldset>
 
         <div
           className="

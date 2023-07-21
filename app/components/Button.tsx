@@ -14,16 +14,14 @@ const Button = () => {
   const secondLastStep = steps.length - 2;
   const lastStep = steps.length - 1;
 
-  const navigate = (direction: string) => {
-    if (direction === 'back') {
-      dispatch(back());
-    } else dispatch(next());
+  const navigate = () => {
+    dispatch(back());
   };
 
   return (
     <div className="flex justify-between items-center w-full">
       <button
-        onClick={() => navigate('back')}
+        onClick={() => navigate()}
         className={clsx(
           'text-[14px]',
           'text-gray',
@@ -37,7 +35,7 @@ const Button = () => {
       </button>
 
       <button
-        onClick={() => navigate('next')}
+        type="submit"
         className={clsx(
           'bg-denim ',
           'text-white ',

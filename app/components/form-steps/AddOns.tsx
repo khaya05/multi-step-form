@@ -27,11 +27,11 @@ const AddOns = () => {
 
   return (
     <div>
-      <p className="title">Pick add-ons</p>
-      <p className="description">
+      <h2 className="title">Pick add-ons</h2>
+      <legend className="description">
         Add-ons help enhance your gaming experience.
-      </p>
-      <form className="flex flex-col gap-6">
+      </legend>
+      <div className="flex flex-col gap-6">
         {addOns.map(({ name, desc, price }) => {
           const id: string = name.replaceAll(' ', '_');
 
@@ -69,7 +69,7 @@ const AddOns = () => {
             </fieldset>
           );
         })}
-      </form>
+      </div>
     </div>
   );
 };

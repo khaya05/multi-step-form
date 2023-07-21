@@ -1,32 +1,40 @@
 'use client';
 
+import { back, next } from '@/store/stepsSlice';
+import { useDispatch } from 'react-redux';
+
 type InputType = {
   label: string;
   type: string;
   placeholder: string;
 };
 
-const PersonalInfo = () => {
-  const inputs: InputType[] = [
-    { label: 'name', type: 'text', placeholder: 'e.g. Stephen King' },
-    {
-      label: 'email address',
-      type: 'email',
-      placeholder: 'e.g .Stephenking@lorem.com',
-    },
-    { label: 'phone number', type: 'text', placeholder: 'e.g. +1 234 567 890' },
-  ];
+const inputs: InputType[] = [
+  { label: 'name', type: 'text', placeholder: 'e.g. Stephen King' },
+  {
+    label: 'email address',
+    type: 'email',
+    placeholder: 'e.g .Stephenking@lorem.com',
+  },
+  { label: 'phone number', type: 'text', placeholder: 'e.g. +1 234 567 890' },
+];
 
+const PersonalInfo = () => {
   return (
     <div>
-      <h2 className='title'>Personal info</h2>
-      <p className='description'>Please provide you name, email address, and phone number.</p>
+      <h2 className="title">Personal info</h2>
+      <legend className="description">
+        Please provide you name, email address, and phone number.
+      </legend>
 
-      <form>
+      <div>
         {inputs.map(({ label, type, placeholder }) => {
           return (
-            <div key={label} className='mb-6'>
-              <label className="block text-[14px] capitalize font-normal text-denim" htmlFor={label}>
+            <div key={label} className="mb-6">
+              <label
+                className="block text-[14px] capitalize font-normal text-denim"
+                htmlFor={label}
+              >
                 {label}
               </label>
 
@@ -34,6 +42,7 @@ const PersonalInfo = () => {
                 id={label}
                 type={type}
                 placeholder={placeholder}
+                // required={true}
                 className="
                   block
                   ring-[1px]
@@ -52,7 +61,7 @@ const PersonalInfo = () => {
             </div>
           );
         })}
-      </form>
+      </div>
     </div>
   );
 };
