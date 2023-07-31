@@ -1,25 +1,50 @@
 'use client';
 
 import { back, next } from '@/store/stepsSlice';
+import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
+import { z, ZodType } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 type InputType = {
   label: string;
   type: string;
+  name: string;
   placeholder: string;
 };
 
 const inputs: InputType[] = [
-  { label: 'name', type: 'text', placeholder: 'e.g. Stephen King' },
+  {
+    label: 'name',
+    type: 'text',
+    placeholder: 'e.g. Stephen King',
+    name: 'name',
+  },
   {
     label: 'email address',
     type: 'email',
+    name: 'email',
     placeholder: 'e.g .Stephenking@lorem.com',
   },
-  { label: 'phone number', type: 'text', placeholder: 'e.g. +1 234 567 890' },
+  {
+    label: 'phone number',
+    type: 'text',
+    name: 'phone',
+    placeholder: 'e.g. +1 234 567 890',
+  },
 ];
 
 const PersonalInfo = () => {
+  const schema: ZodType<InputType> = z.object({
+    name: z.string().min(2).max(30),
+    email: z.string().email(),
+    phone: z.string().max(12),
+  });
+
+  const { register, handleSubmit } = useForm<InputType>({
+    resolver: zodResolver(schema),
+  });
+
   return (
     <div>
       <h2 className="title">Personal info</h2>
@@ -28,7 +53,7 @@ const PersonalInfo = () => {
       </legend>
 
       <div>
-        {inputs.map(({ label, type, placeholder }) => {
+        {inputs.map(({ label, type, placeholder, name }) => {
           return (
             <div key={label} className="mb-6">
               <label
@@ -41,8 +66,10 @@ const PersonalInfo = () => {
               <input
                 id={label}
                 type={type}
+                name={name}
                 placeholder={placeholder}
                 // required={true}
+                {...register(name)}
                 className="
                   block
                   ring-[1px]

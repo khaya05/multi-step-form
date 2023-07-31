@@ -1,9 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import stepsSlice from "./stepsSlice";
+import userData from './userDataSlice'
 
 export const store = configureStore({
   reducer: {
-    steps: stepsSlice
+    steps: stepsSlice,
+    userData
+
   }
 })
 

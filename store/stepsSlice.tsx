@@ -11,7 +11,7 @@ interface StepsState {
 }
 
 const initialState: StepsState = {
-  currentIndex: 1,
+  currentIndex: 0,
   steps: [
     <PersonalInfo key={0} />,
     <Plan key={1} />,
@@ -26,7 +26,7 @@ export const stepsSlice = createSlice({
   initialState,
   reducers: {
     next: (state) => {
-      console.log('next >>')
+      console.log('next >>');
       if (state.currentIndex >= state.steps.length - 1) {
         return state;
       }
@@ -36,14 +36,14 @@ export const stepsSlice = createSlice({
 
     back: (state) => {
       if (state.currentIndex <= 0) {
-        return state
+        return state;
       }
       state.currentIndex--;
-      return state
-    }
+      return state;
+    },
   },
 });
 
-export const {next, back} = stepsSlice.actions
+export const { next, back } = stepsSlice.actions;
 
-export default stepsSlice.reducer
+export default stepsSlice.reducer;
